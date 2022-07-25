@@ -1,0 +1,315 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* SCROLL BAR */
+* {
+    scrollbar-color: #4E4E4E #202225;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4E4E4E;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #202225;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #99a3ac;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+
+.wrapper {
+    background-color: #FFEFA7;
+    transition: 0.4s;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.left, .right {
+    width: 17%;
+}
+
+.wrapper .line-toggle {
+    border-color: whitesmoke;
+}
+
+.wrapper .line-toggle-bg {
+    background-color: whitesmoke;
+}
+
+.left-line {
+    min-width: 5px;
+    height: 100%;
+    background-color: #3B3C36;
+    position: absolute;
+    left: 50px;
+}
+
+.top-line {
+    background-color: #3B3C36;
+    position: absolute;
+    width: 100vw;
+    min-height: 5px;
+    top: 40px;
+    left: 0;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.text {
+    font-family: 'smile_of_the_ocean';
+    font-size: 8rem;
+    text-align: center;
+}
+
+.quill {
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    height: auto;
+    width: 250px;
+    transition: 0.4s;
+}
+
+.newQuill {
+    position: fixed;
+}
+
+.quill svg {
+    width: 100%;
+    height: auto;
+}
+
+.rizal-pic {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 360px;
+}
+
+.rizal-pic img {
+    width: 100%;
+}
+
+.scroll-down-icon {
+    position: absolute;
+    bottom: 0;
+}
+
+.scroll-down-icon .circle {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid #3B3C36;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-family: 'altero';
+    color: #3B3C36;
+}
+
+.scroll-down-icon .line {
+    height: 50px;
+    width: 3px;
+    background-color: #3B3C36;
+    margin: auto;
+}
+
+.short-intro2 {
+    border-top: 5px solid #3B3C36;
+}
+
+.short-intro2 .center-section {
+    position: relative;
+    width: 100%;
+}
+
+/* BOARD */
+.contents {}
+
+.board-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.board-container .line-connector {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.line-connector .line {
+    background-color: #3B3C36;
+    width: 3px;
+}
+
+.board-container .board {
+    width: 50%;
+    border: 4px solid #3B3C36;
+    margin: auto;
+    padding: 2rem;
+}
+
+.board .header {
+    font-family: 'altero';
+    font-size: 3rem;
+}
+
+.board .desc {
+    font-family: 'Baloo 2';
+    font-size: 1rem;
+}
+
+.light-bulb-container {
+    position: absolute;
+    left: 0; top: 0;
+}
+
+.light-bulb-container svg {
+    width: 100%;
+    height: auto;
+}
+
+/* ACHIEVEMENTS */
+.achievements {
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 100px;
+}
+
+.achievements .header {
+    font-family: 'altero';
+    font-size: 3rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+}
+
+.col1 {
+    width: 100%;
+}
+
+.card {    
+    border: 1px solid #202225;
+    margin: 20px 20px 20px 0px;
+    padding: 15px;
+    display: flex;
+}
+
+.card .icon-img img {
+    width: auto;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.card .icon-img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.card .card-content {
+    width: 100%;
+}
+
+.card .card-content .title {
+    font-family: 'altero';
+    font-size: 1.5rem
+}
+
+.card .card-content .desc {
+    text-indent: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .quill {
+        bottom: 0; right: 0; top: auto;
+        height: auto;
+        width: 75px;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .board-container .board {
+        border: 4px solid #3B3C36;
+        margin: auto;
+        width: 70%;
+    }
+  }
+
+@media only screen and (max-width: 760px) {
+    .light-bulb-container {
+        display: none;
+    }
+
+    .left, .right {
+        display: none;
+    }
+
+    .board-container .board {
+        width: 80%;
+    }
+
+    .rizal-pic {
+        height: auto;
+        width: 40%;
+        overflow: hidden;
+        margin-bottom: -5px;
+    }
+
+    .short-intro .text {
+        font-size: 5rem;
+        padding: 0px 25px;
+    }
+    
+    .short-intro .center-section {
+        height: 90vh;
+    }
+  }
