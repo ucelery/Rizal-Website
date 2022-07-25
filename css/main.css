@@ -41,10 +41,7 @@ html, body {
     display: flex;
     justify-content: center;
     position: relative;
-}
-
-.short-intro {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .center-section {
@@ -277,7 +274,8 @@ html, body {
 }
 
 .transition .center-section {
-    margin: 25% 0px;
+    margin: 20% 0px;
+    margin-bottom: 0px;
 }
 
 .transition .left-text {
@@ -288,6 +286,34 @@ html, body {
 .transition .right-text {
     text-align: right;
     float: right;
+}
+
+/* TWITTER */
+
+.tweets-content {
+    width: 100%;
+}
+
+.tweets-container .tweet {
+    margin-top: 100px;
+
+}
+
+.twitter .tweets-container {
+    display:flex;
+    justify-content: center;
+}
+
+.section-header {
+    font-size: 3rem;
+    font-family: 'altero';
+    width: 100%;
+}
+
+/* FOOTER */
+.section.footer {
+    min-height: 35vh;
+    border-top: 2px solid whitesmoke;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -310,7 +336,7 @@ html, body {
     .transition .text-header {
         font-family: 'altero';
         font-size: 2.5rem;
-        margin: 150px 0;
+        margin: 150px 20px;
         width: 80%;;
     }
   }
@@ -349,6 +375,20 @@ html, body {
         font-size: 2.2rem;
         text-align: center;
     }
+
+    .section-header {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .tweets {
+        margin: 0px 25px;
+
+    }
+
+    .tweets .tweet svg {
+        width: 100%;
+    }
   }
 
   @media only screen and (max-width: 500px) {   
@@ -357,10 +397,8 @@ html, body {
     }
 
     .transition .text-header {
-        font-family: 'altero';
         font-size: 1.5rem;
         margin: 50px 20px;
-        width: 80%;
     }
 
     .card-content {
@@ -373,4 +411,8 @@ html, body {
         display: flex;
     }
     
+    .section-header {
+        font-size: 1.5rem;
+        text-align: center;
+    }
   }
