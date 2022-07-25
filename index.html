@@ -467,7 +467,7 @@
 
         $(window).scroll(function () {
             let quill = document.getElementById('quill');
-            if (window.pageYOffset >= introTop && window.pageYOffset <= (introEndTop + (introEnd.clientHeight))) {
+            if (window.pageYOffset >= introTop && window.pageYOffset <= (introEndTop + (introEnd.clientHeight * .7))) {
                 initLightMode();
             } else {
                 // DARK MODE

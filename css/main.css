@@ -151,6 +151,7 @@ html, body {
 
 .short-intro2 {
     border-top: 5px solid #3B3C36;
+    height: auto;
 }
 
 .short-intro2 .center-section {
@@ -160,8 +161,6 @@ html, body {
 
 /* BOARD */
 .board-container {
-    position: absolute;
-    top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
