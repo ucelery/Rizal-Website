@@ -53,4 +53,6 @@ $(document).ready(function () {
             item.classList.add('line-toggle-bg');
         });
     }
+
+    new WOW().init();
 });
