@@ -73,6 +73,14 @@ html, body {
     left: 50px;
 }
 
+.line-mark {
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    top: 10px; left: 27px;
+    background-color: whitesmoke;
+}
+
 .top-line {
     background-color: #3B3C36;
     position: absolute;
@@ -327,7 +335,7 @@ html, body {
     position: relative;
 }
 
-.video-container {
+.tiktok .video-container {
     padding: 25px;
     padding-bottom: 15px;
     background-color: #1E1E1B;
@@ -335,18 +343,18 @@ html, body {
     width: 300px;
 }
 
-.video-foreground video {
+.tiktok .video-foreground video {
     width: 100%;
     height: auto;
 }
 
-.video-foreground {
+.tiktok .video-foreground {
     border-radius: 15px;
     overflow: hidden;
     position: relative;
 }
 
-.video-container .controls {
+.tiktok .video-container .controls {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -383,6 +391,50 @@ html, body {
 .text-container.bottom {
     position:absolute;
     bottom: 0;
+}
+
+/* STREAMING */
+.stream-content {
+    display: flex;
+    justify-content: center;
+}
+
+.streaming-container {
+    display: flex;
+    width: 80%;
+}
+
+.stream .video-foreground video {
+    width: 100%;
+    height: auto;
+}
+
+.stream-chat {
+    width: 20%;
+    background-color: #18181B;
+    padding: 15px;
+}
+
+.stream-desc {
+    height: 10%;
+    width: 100%;
+    position: relative;
+}
+
+.stream-desc .desc-svg {
+    width: 80%
+}
+
+.stream .video-container {
+    padding: 20px;
+    width: 80%;
+}
+
+.stream .live-svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
 }
 
 /* FOOTER */
@@ -483,12 +535,30 @@ html, body {
         margin: 25px 0px;
     }
 
-    .video-container {
+    .tiktok .video-container {
         margin: auto;
     }
 
     .text-container.bottom {
         position:initial ;
+    }
+
+    .stream-main {
+        margin: 25px;
+    }
+
+    .stream-chat {
+        display:none;
+    }
+
+    .stream .video-container {
+        width: 100%;
+        margin-top: 35px;
+        padding: 0;
+    }
+
+    .stream .streaming-container {
+        width: 100%;
     }
   }
 
@@ -517,9 +587,13 @@ html, body {
         text-align: center;
     }
 
-    .video-container {
+    .tiktok .video-container {
         padding: 0;
         width: 100%;
         background-color: transparent;
-    }    
+    }   
+
+    .tiktok-main .text-container {
+        padding: 0px;
+    }
   }
