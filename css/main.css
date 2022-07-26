@@ -9,6 +9,7 @@ html, body {
 * {
     scrollbar-color: #4E4E4E #202225;
     scrollbar-width: thin;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {

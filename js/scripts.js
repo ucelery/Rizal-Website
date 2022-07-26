@@ -17,6 +17,7 @@ $(document).ready(function () {
     let introEndTop = introEnd.offsetTop;
 
     let tiktok = document.getElementById('tiktok');
+    let stream = document.getElementById('stream');
 
     // Get all lines to be converted to white
     // Colored BG
@@ -34,11 +35,19 @@ $(document).ready(function () {
             initDarkMode();
         }
 
-        var vid = document.getElementById("tiktok-jp");
-        if (window.pageYOffset >= tiktok.offsetTop - (tiktok.offsetTop * 0.1)) {
-            vid.play();
+        var tiktok_vid = document.getElementById("tiktok-jp");
+        var stream_vid = document.getElementById("stream-jp");
+        if (window.pageYOffset >= tiktok.offsetTop - (tiktok.offsetTop * 0.1) && window.pageYOffset <= stream.offsetTop) {
+            tiktok_vid.play();
         } else {
-            vid.pause();
+            tiktok_vid.pause();
+        }
+
+        console.log(`${window.pageYOffset} >= ${stream.offsetTop - (stream.offsetTop * 0.1)}`);
+        if (window.pageYOffset >= stream.offsetTop - (stream.offsetTop * 0.1)) {
+            stream_vid.play();
+        } else {
+            stream_vid.pause();
         }
     });
 
