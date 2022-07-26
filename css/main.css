@@ -394,6 +394,66 @@ html, body {
     bottom: 0;
 }
 
+/* YOUTUBE */
+.youtube .center-section {
+    align-items: initial;
+    display: initial;
+}
+
+.youtube .youtube-main {
+    margin:auto;
+    margin-top: 25px;
+    background-color: rgba(255, 0, 0, 0.2);
+    width: 80%;
+}
+
+.youtube .header {
+    height: 60px;
+    margin-bottom: 100px;
+    background-color: #202020;
+}
+
+.youtube .header .menu svg {
+    float: left;
+}
+
+.youtube .header .icon,
+.youtube .header .menu {
+    float: left;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.youtube-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.youtube-content .left {
+    width: 20%
+}
+
+.youtube-content .center {
+    width: 40%
+}
+
+.youtube-content .right {
+    width: 40%
+}
+
+.video-foreground video {
+    width: 100%;
+    height: auto;
+}
+
+.video-foreground {
+    width: 100%;
+}
+
 /* STREAMING */
 .stream-content {
     display: flex;
@@ -426,6 +486,11 @@ html, body {
     width: 80%
 }
 
+.stream-main .text-container div {
+    width: 80%;
+    margin: 25px 0px;
+}
+
 .stream .video-container {
     padding: 20px;
     width: 80%;
@@ -438,10 +503,41 @@ html, body {
     width: 10%;
 }
 
+/* DIVIDER */
+.section-cut {
+    display: flex;
+}
+
+.section-cut .box {
+    margin-left: 50px;
+    width: 75px;
+    height: 75px;
+    border-left: 5px solid whitesmoke;
+    border-bottom: 5px solid whitesmoke;
+    border-bottom-left-radius: 50%;
+}
+
+.section-cut .longer-box {
+    width: 100%;
+    height: 75px;
+    border-bottom: 5px solid whitesmoke;
+}
+
 /* FOOTER */
-.section.footer {
-    min-height: 35vh;
-    border-top: 2px solid whitesmoke;
+.footer {
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer  .header {
+    font-family: 'altero';
+    font-size: 3rem;
+    text-align: center;
+}
+
+.footer .content {
+    width: 80%;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -512,6 +608,7 @@ html, body {
     .section-header {
         font-size: 1.5rem;
         text-align: center;
+        margin-top: 20px;
     }
 
     .tweets {
@@ -547,7 +644,7 @@ html, body {
     .stream-main {
         margin: 25px;
     }
-
+    
     .stream-chat {
         display:none;
     }
@@ -560,6 +657,10 @@ html, body {
 
     .stream .streaming-container {
         width: 100%;
+    }
+
+    .section-cut .box {
+        display: none;
     }
   }
 
@@ -597,4 +698,5 @@ html, body {
     .tiktok-main .text-container {
         padding: 0px;
     }
+    
   }
