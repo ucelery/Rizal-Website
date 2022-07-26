@@ -662,6 +662,10 @@ html, body {
     .section-cut .box {
         display: none;
     }
+
+    .footer .content .header {
+        font-size: 2rem;
+    }
   }
 
   @media only screen and (max-width: 500px) {   
