@@ -1,9 +1,22 @@
 // CHANGE NAV BAR ON SCROLL
 $(document).ready(function () {
+    wow = new WOW(
+        {
+            boxClass: 'wow',      // default
+            animateClass: 'animated', // default
+            offset: 300,          // default
+            mobile: true,       // default
+            live: true        // default
+        }
+    )
+    wow.init();
+
     let intro = document.getElementById('intro');
     let introTop = intro.offsetTop;
     let introEnd = document.getElementById('introEnd');
     let introEndTop = introEnd.offsetTop;
+
+    let tiktok = document.getElementById('tiktok');
 
     // Get all lines to be converted to white
     // Colored BG
@@ -14,12 +27,18 @@ $(document).ready(function () {
     let wrapper = document.getElementById('wrapper');
 
     $(window).scroll(function () {
-        let quill = document.getElementById('quill');
         if (window.pageYOffset >= introTop && window.pageYOffset <= (introEndTop + (introEnd.clientHeight * .7))) {
             initLightMode();
         } else {
             // DARK MODE
             initDarkMode();
+        }
+
+        var vid = document.getElementById("tiktok-jp");
+        if (window.pageYOffset >= tiktok.offsetTop - (tiktok.offsetTop * 0.1)) {
+            vid.play();
+        } else {
+            vid.pause();
         }
     });
 
@@ -53,6 +72,4 @@ $(document).ready(function () {
             item.classList.add('line-toggle-bg');
         });
     }
-
-    new WOW().init();
 });

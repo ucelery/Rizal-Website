@@ -2,6 +2,7 @@ html, body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    font-family: 'Baloo 2';
 }
 
 /* SCROLL BAR */
@@ -260,7 +261,6 @@ html, body {
 }
 
 .card .card-content .desc {
-    text-indent: 50px;
     font-size: 1em;
     font-family: 'Baloo 2';
 }
@@ -310,6 +310,81 @@ html, body {
     width: 100%;
 }
 
+/* TIKTOK */
+.tiktok-container {
+    width: 100%;
+}
+
+.tiktok-main {
+    display: flex;
+    justify-content: center;
+    margin: 75px 25px;
+}
+
+.tiktok-main .main-left,
+.tiktok-main .main-right {
+    width: 33%;
+    position: relative;
+}
+
+.video-container {
+    padding: 25px;
+    padding-bottom: 15px;
+    background-color: #1E1E1B;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.video-foreground video {
+    width: 100%;
+    height: auto;
+}
+
+.video-foreground {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-container .controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 50px;
+    background-color: #11110F;
+
+    display: flex;    
+}
+
+.controls .btn {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tiktok .circle-btn-container {
+    padding-top: 15px;
+}
+
+.tiktok .circle-btn {
+    border-radius: 50%;
+    background-color: #414141;
+    min-height: 50px;
+    width: 50px;
+    margin: auto;
+}
+
+.tiktok-main .text-container {
+    padding: 0px 35px;
+    position:relative;
+}
+
+.text-container.bottom {
+    position:absolute;
+    bottom: 0;
+}
+
 /* FOOTER */
 .section.footer {
     min-height: 35vh;
@@ -338,6 +413,11 @@ html, body {
         font-size: 2.5rem;
         margin: 150px 20px;
         width: 80%;;
+    }
+
+    .tiktok .circle-btn {
+        min-height: 30px;
+        width: 30px;
     }
   }
 
@@ -415,4 +495,17 @@ html, body {
         font-size: 1.5rem;
         text-align: center;
     }
+
+    .tiktok-main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 75px 25px;
+    }
+
+    .video-container {
+        padding: 0;
+        width: 100%;
+        background-color: transparent;
+    }    
   }
