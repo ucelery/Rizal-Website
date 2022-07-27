@@ -4,7 +4,7 @@ $(document).ready(function () {
         {
             boxClass: 'wow',      // default
             animateClass: 'animated', // default
-            offset: 300,          // default
+            offset: 100,
             mobile: true,       // default
             live: true        // default
         }
@@ -18,6 +18,8 @@ $(document).ready(function () {
 
     let tiktok = document.getElementById('tiktok');
     let stream = document.getElementById('stream');
+
+    let quillIconPath = Array.prototype.slice.call(document.getElementsByClassName('quill-path'));
 
     // Get all lines to be converted to white
     // Colored BG
@@ -43,7 +45,6 @@ $(document).ready(function () {
             tiktok_vid.pause();
         }
 
-        console.log(`${window.pageYOffset} >= ${stream.offsetTop - (stream.offsetTop * 0.1)}`);
         if (window.pageYOffset >= stream.offsetTop - (stream.offsetTop * 0.1)) {
             stream_vid.play();
         } else {
@@ -57,6 +58,10 @@ $(document).ready(function () {
 
         wrapper.style.backgroundColor = '#FFEFA7';
         wrapper.style.color = 'black';
+
+        quillIconPath.forEach(item => {
+            item.style.fill = 'black';
+        });
 
         linesBR.forEach(item => {
             item.classList.remove('line-toggle');
@@ -72,6 +77,10 @@ $(document).ready(function () {
 
         wrapper.style.color = 'whitesmoke';
         wrapper.style.backgroundColor = '#11110F';
+
+        quillIconPath.forEach(item => {
+            item.style.fill = 'white';
+        });
 
         linesBR.forEach(item => {
             item.classList.add('line-toggle');

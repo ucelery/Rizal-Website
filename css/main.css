@@ -5,6 +5,42 @@ html, body {
     font-family: 'Baloo 2';
 }
 
+a {
+    text-decoration: none;    
+    color: #4E4E4E;
+}
+
+/* STUFF */
+.big-text {
+    font-size: 2.5em;
+    font-family: 'altero';
+    margin: 15px 0px;
+}
+
+.unim {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.quill-path {
+    transition: 0.4s;
+}
+
+@media only screen and (max-width: 1000px) {   
+    .big-text {
+        font-size: 2em;
+        font-family: 'altero';
+        margin: 15px 0px;
+    }   
+}
+
+@media only screen and (max-width: 760px) {   
+    .big-text {
+        font-size: 1.5em;
+        font-family: 'altero';
+        margin: 15px 0px;
+    }   
+}
+
 /* SCROLL BAR */
 * {
     scrollbar-color: #4E4E4E #202225;
@@ -245,11 +281,10 @@ html, body {
     display: flex;
 }
 
-.card .icon-img img {
+.card .icon-img svg {
     margin-top: 5px;
     width: auto;
-    height: 100px;
-    border-radius: 50%;
+    height: 50px;
 }
 
 .card .icon-img {
@@ -394,64 +429,86 @@ html, body {
     bottom: 0;
 }
 
-/* YOUTUBE */
-.youtube .center-section {
-    align-items: initial;
-    display: initial;
+/* VLOGGING */
+.stream-chat .chat-header {
+    color: white;
+    border-bottom: 2px solid whitesmoke
 }
 
-.youtube .youtube-main {
-    margin:auto;
-    margin-top: 25px;
-    background-color: rgba(255, 0, 0, 0.2);
-    width: 80%;
-}
-
-.youtube .header {
-    height: 60px;
-    margin-bottom: 100px;
-    background-color: #202020;
-}
-
-.youtube .header .menu svg {
-    float: left;
-}
-
-.youtube .header .icon,
-.youtube .header .menu {
-    float: left;
-    height: 100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 20px;
-}
-
-.youtube-content {
+.youtube-main .youtube-container {
     width: 100%;
+}
+
+.youtube-main .main-left .text-container {
+    padding-top: 20px;
+}
+
+.youtube-main {
+    display: flex;
+}
+
+.youtube-rec .recommended-box {
+    width: 100%;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px 0px;
+}
+
+.youtube-desc .desc {
+    width: 100%;
+    height: 100%;
+}
+
+.youtube-desc .desc .title {
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    line-height: 1;
+    padding-bottom: 8px;
+}
+
+.youtube-desc .desc .details {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.youtube-desc .desc .profile-deets {
+    display: flex;
+    padding: 10px;
+    float: left;
+}
+
+.profile-deets .more-deets {
+    margin-left: 10px;
+    line-height: 1.2;
+}
+
+.more-deets .subs {
+    opacity: 0.3;
+    font-size: 0.8em;
+}
+
+.youtube-desc .profile-container {
+    position: relative;
+}
+
+.youtube-desc .profile-container .icon {
+    height: 55px;
+    width: 55px;
+    background-image: url('https://media.discordapp.net/attachments/976691420087853066/1001740094543237190/image_21.png');
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+
+.profile-container .sub-btn {
+    float: right;
+    background-color: #CC0000;
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
-}
-
-.youtube-content .left {
-    width: 20%
-}
-
-.youtube-content .center {
-    width: 40%
-}
-
-.youtube-content .right {
-    width: 40%
-}
-
-.video-foreground video {
-    width: 100%;
-    height: auto;
-}
-
-.video-foreground {
-    width: 100%;
+    align-items: center;
+    border-radius: 3px;
 }
 
 /* STREAMING */
@@ -540,6 +597,17 @@ html, body {
     width: 80%;
 }
 
+.footer .more-stuff {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.footer .text-container {
+    width: 70%;
+    margin-bottom: 50px;
+}
+
 @media only screen and (max-width: 1000px) {
     .quill {
         bottom: 0; right: 0; top: auto;
@@ -567,6 +635,14 @@ html, body {
     .tiktok .circle-btn {
         min-height: 30px;
         width: 30px;
+    }
+
+    .youtube-rec {
+        display: none;
+    }
+
+    .section-header {
+        margin-top: 75px;
     }
   }
 
@@ -666,9 +742,33 @@ html, body {
     .footer .content .header {
         font-size: 2rem;
     }
+
+    .youtube .center-section .youtube-main {
+        display: initial;
+    }
+
+    .youtube .youtube-main .stream-content {
+        padding: 0px 25px;
+    }
+
+    .youtube .youtube-main .main-left {
+        padding: 0px 50px;
+    }
+
+    .youtube .main-left .text-container {
+        text-align: center;
+    }
+
+    .youtube-main .text-container div {
+        width: 100%;
+    }
   }
 
   @media only screen and (max-width: 500px) {   
+    .tweets-container .tweet {
+        margin-top: 50px;
+    }
+
     .card .icon-img {
         display: none;
     }
