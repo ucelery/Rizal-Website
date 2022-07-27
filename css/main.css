@@ -803,4 +803,12 @@ a {
         padding: 0px;
     }
     
+    .footer .text-container {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        margin-top: 50px;
+    }
   }
